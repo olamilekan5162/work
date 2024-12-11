@@ -7,7 +7,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 
-export default function DonateDrop({toggleDonate}){
+export default function DonateDrop({toggleDonate}: any){
 
     const [amount, setAmount] = useState('')
 
@@ -21,7 +21,7 @@ export default function DonateDrop({toggleDonate}){
                     <X size={24} />
                     
                 </button>
-                <p className='text-center'>All donations goes directly to the builders in commons</p>
+                <p className='mt-10 text-center'>All donations goes directly to the builders in commons</p>
                 <div className='flex flex-row gap-4 items-center justify-between'>
                     <button onClick={() => setAmount('10')} className='py-1 px-2 outline-none rounded-sm text-black border border-blue-600 hover:bg-blue-600 hover:text-white'>
                         $10

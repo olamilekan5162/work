@@ -114,6 +114,15 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            <li
+            onClick={()=> {
+              setIsMenuOpen(false)
+              setIsDonateOpen(true)
+            }}
+            className="text-gray-700 hover:cursor-pointer hover:text-primary-700 transition-colors duration-200"
+            >
+              Donate
+            </li>
           </ul>
         </div>
       </div>

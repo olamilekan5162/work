@@ -16,9 +16,9 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // const toggleDonate = () => {
-  //   setIsDonateOpen(true);
-  // };
+  const toggleDonate = () => {
+    setIsDonateOpen(false);
+  };
 
   const menuItems = [
     { href: "/", label: "Earn" },
@@ -120,10 +120,8 @@ const Header = () => {
     </nav>
     {isDonateOpen &&
 
-    <div onClick={()=> setIsDonateOpen(false)} className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" >
-      <div onClick={()=> setIsDonateOpen(true)}>
-        <DonateDrop />
-      </div>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" >
+      <DonateDrop toggleDonate={toggleDonate}/>
     </div>
     }
     </>

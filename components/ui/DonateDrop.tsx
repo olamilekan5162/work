@@ -10,7 +10,7 @@ export default function DonateDrop(){
     const [amount, setAmount] = useState('')
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] bg-gray-100 p-4">
+        // <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] bg-gray-100 p-4">
             <div className="w-[300px] h-fit gap-8 flex flex-col items-center justify-center p-8 rounded-lg border bg-white text-gray-700 shadow-sm">
                 <p className='text-center'>All donations goes directly to the builders in commons</p>
                 <div className='flex flex-row gap-4 items-center justify-between'>
@@ -42,8 +42,6 @@ export default function DonateDrop(){
                     DONATE
                 </Button> */}
             </div>
-
-        </div>
     )
 
 }

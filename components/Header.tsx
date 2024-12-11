@@ -6,12 +6,19 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import DonateDrop from "@/components/ui/DonateDrop";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDonateOpen, setIsDonateOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // const toggleDonate = () => {
+  //   setIsDonateOpen(true);
+  // };
 
   const menuItems = [
     { href: "/", label: "Earn" },
@@ -33,6 +40,7 @@ const Header = () => {
   ];
 
   return (
+    <>
     <nav className="border-gray-200 px-4 lg:px-6 py-5 bg-white">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         {/* Logo */}
@@ -76,6 +84,7 @@ const Header = () => {
               </li>
             ))}
             <li
+            onClick={()=> setIsDonateOpen(true)}
             className="text-gray-700 hover:cursor-pointer hover:text-primary-700 transition-colors duration-200"
             >
               Donate
@@ -109,6 +118,15 @@ const Header = () => {
         </div>
       </div>
     </nav>
+    {isDonateOpen &&
+
+    <div onClick={()=> setIsDonateOpen(false)} className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" >
+      <div onClick={()=> setIsDonateOpen(true)}>
+        <DonateDrop />
+      </div>
+    </div>
+    }
+    </>
   );
 };
 

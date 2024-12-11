@@ -28,7 +28,7 @@ const Header = () => {
       newTab: true,
     },
     { href: "/tip", label: "Tip" },
-    { href: "/donate", label: "Donate" },
+    // { href: "/donate", label: "Donate" },
     //{href: 'https://guild.xyz/commons', label: 'Guild', newTab: true}
   ];
 
@@ -75,6 +75,11 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            <li
+            className="text-gray-700 hover:cursor-pointer hover:text-primary-700 transition-colors duration-200"
+            >
+              Donate
+            </li>
           </ul>
         </div>
 

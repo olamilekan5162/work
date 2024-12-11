@@ -11,9 +11,9 @@ export default function DonateDrop(){
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] bg-gray-100 p-4">
-            <div className="w-[300px] h-[300px] gap-4 flex flex-col items-center justify-center p-4 rounded-lg border bg-white text-gray-700 shadow-sm">
+            <div className="w-[300px] h-fit gap-8 flex flex-col items-center justify-center p-8 rounded-lg border bg-white text-gray-700 shadow-sm">
                 <p className='text-center'>All donations goes directly to the builders in commons</p>
-                <div className='flex flex-row gap-2 items-center content-center'>
+                <div className='flex flex-row gap-4 items-center justify-between'>
                     <button onClick={() => setAmount('10')} className='py-1 px-2 outline-none rounded-sm text-black border border-blue-600 hover:bg-blue-600 hover:text-white'>
                         $10
                     </button>
@@ -22,7 +22,7 @@ export default function DonateDrop(){
                         $25
                     </button>
 
-                    <button onClick={() => setAmount('25')} className='py-1 px-2 rounded-sm text-black border border-blue-600 hover:bg-blue-600 hover:text-white'>
+                    <button onClick={() => setAmount('50')} className='py-1 px-2 rounded-sm text-black border border-blue-600 hover:bg-blue-600 hover:text-white'>
                         $50
                     </button>
                     
@@ -32,11 +32,15 @@ export default function DonateDrop(){
                 placeholder="Enter an amount to Donate" 
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="py-1 border-none outline-none bg-gray-100 items-center placeholder:text-xs placeholer:text-white"/>
+                className="py-1 pl-1 border-none outline-none rounded-sm bg-gray-100 items-center placeholder:text-xs placeholder:text-gray-500"/>
                 
-                <Button>
+                <button className='py-2 px-4 outline-none rounded-md text-white font-bold bg-blue-600 hover:bg-opacity-75'>
+                        DONATE
+                </button>
+                
+                {/* <Button variant={'default'}>
                     DONATE
-                </Button>
+                </Button> */}
             </div>
 
         </div>
